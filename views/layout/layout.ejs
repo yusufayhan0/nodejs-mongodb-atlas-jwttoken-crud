@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <%-include("../include/header.ejs")%>
+
+    <% if(typeof link === 'object' && link !== null){ %>
+    <% link.forEach(function(a) { %>
+        <link rel="stylesheet" href="<%= a %>">
+    <% })} %>
+
+</head>
+<body>
+    <%-include("../include/navbar.ejs")%>
+    

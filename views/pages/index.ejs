@@ -1,0 +1,32 @@
+
+
+<%-include("../layout/layout.ejs")%>
+
+
+<div class="container">
+
+    <%yazilar.forEach((yazilar)=>{%>
+
+
+        <div class="card mb-3" >
+            <h5 class="card-header"><%=yazilar.title%></h5>
+            <div class="card-body">
+              <h5 class="card-title"><%=yazilar.short%></h5>
+              <p class="card-text"><%=yazilar.long%></p>
+              <a href="/blog/<%= yazilar.link %>-t<%=yazilar.id%>" class="btn btn-primary">Detay</a>
+            </div>
+          </div>
+
+
+          <%})%>
+    
+
+</div>
+
+
+
+
+
+
+
+<%-include("../include/footer.ejs")%>
